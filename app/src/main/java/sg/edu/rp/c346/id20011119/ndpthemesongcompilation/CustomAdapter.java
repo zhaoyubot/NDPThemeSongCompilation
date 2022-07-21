@@ -35,7 +35,6 @@ public class CustomAdapter extends ArrayAdapter {
         View rowView = inflater.inflate(layout_id,parent,false);
         TextView tvName =rowView.findViewById(R.id.textViewTitle);
         TextView tvYearReleased = rowView.findViewById(R.id.textViewyearReleased);
-        TextView tvStars = rowView.findViewById(R.id.textviewStar);
         TextView tvSinger = rowView.findViewById(R.id.textViewSingers);
         Song currentVersion = SongList.get(position);
         tvName.setText(currentVersion.getTitle());
@@ -53,8 +52,6 @@ public class CustomAdapter extends ArrayAdapter {
         }else if(currentVersion.getStars() == 5){
             numstars = "*****";
         }
-        tvStars.setText(numstars);
-
         return rowView;
     }
 
